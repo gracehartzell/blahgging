@@ -46,7 +46,7 @@ one thing should have a specific id.
 :first-child
 :nth-child
 ```
-(CSS tricks article)[https://css-tricks.com/pseudo-class-selectors/].
+[CSS tricks article](https://css-tricks.com/pseudo-class-selectors/).
 * Wildcard selector: * selects everything. It's the easiest to overwrite.
 * Not new, ./ means in the same directory. 
 * If you want to h bave rigid corners meeting up (as in multiple divs), use fixed width and not flex. 
@@ -99,8 +99,8 @@ a.toFixed(2); // 3.50
 
 
 # 11 October, From Fundamentals to Functional Programming (Bianca Gandalfo)
-(**DAY 1 NOTES**)[https://slides.com/bgando/f2f-final-day-1#/7/20]
-(**DAY 2 NOTES**)[https://slides.com/bgando/f2f-final-day-2#/]
+[**DAY 1 NOTES**](https://slides.com/bgando/f2f-final-day-1#/7/20)
+[**DAY 2 NOTES**](https://slides.com/bgando/f2f-final-day-2#/)
 On a non-JS note, I'm learning a lot about different styles of teaching and what methods I think are best. 
 So far, I really like the styles on Frontend Masters and actually wish Galvanize would adopt more of the same 
 approach that they have. That is, giving a lecture that explains the reasoning behind, use of, and alternatives 
@@ -189,7 +189,7 @@ _.each(
 
 ### map function
 
-**_.map([1,2,3], function(v, i, list) {console.log(v)})**
+`_.map([1,2,3], function(v, i, list) {console.log(v)})`
   * Would return an array of length three (length of original array) of undefined values
 * **Always returns an array. Take list and transform into new array.**
 * Produces a new array of values by mapping each value in **list** through a transformation function (iterator)
@@ -346,7 +346,7 @@ The area where a variable has access to some value.
 # 22 October 2018, Getting Back on the Horse
 
 Things I learned or refreshed today:
-#### (Event Propagation)[https://www.sitepoint.com/event-bubbling-javascript/]
+#### [Event Propagation](https://www.sitepoint.com/event-bubbling-javascript/)
 * `event` is an object 
 * the `event target` is the innermost element over which the click (or mouseover, etc.) originated
   * `event target` plus its ancestors (all the way back to the `window` object -- window is not a DOM 
@@ -364,7 +364,7 @@ from the window to the event target and back.
 3. **Bubble Phase**: event target parent back to the window
 * Differentiation between the phases is the type of listeners called
 
-(**FormData**)[https://developer.mozilla.org/en-US/docs/Web/API/FormData/get]:
+[**FormData**](https://developer.mozilla.org/en-US/docs/Web/API/FormData/get):
 function FormData that takes in an object -- new creates a new object 
 
 **Understanding `new`**
@@ -433,7 +433,7 @@ and for who knows what reason that has been irking me.
 * Today in developments, I've started being more aware of a line's character count. I typically use the word wrap, 
 but the more I read on various websites (Github in particular) the more cantankerous I become since so many 
 documents require you to scroll sideways in their block. 
-* I found an article the other day that I really liked on template strings and want to save it for later. It's called (*Easy Creation of HTML with JavaScript’s Template Strings*)[https://wesbos.com/template-strings-html/].
+* I found an article the other day that I really liked on template strings and want to save it for later. It's called [*Easy Creation of HTML with JavaScript’s Template Strings*](https://wesbos.com/template-strings-html/).
 
 
 #### Learned Things:
@@ -462,22 +462,24 @@ further into the object.
   * Passing data in as the starting point for the function. 
   * Example case if item were name.first -> 
     The split('.') would first break it into ['name', 'first'] next, reduce would take over and produce:
-     ____________acc__|__curr___
-                data  | 'name'
-           data.name  | 'first'
-     data.name.first  |  --
+
+    | **acc**         | **curr**      |
+    | --------------- |:-------------:|
+    | data            | 'name'        |
+    | data.name       | 'first'       |
+    | data.name.first | --            |
 
 #### Things I need to refresh (or go deeper with):
 1. Fetch API and .then()/promises. 
-2. Higher Order Functions. A nice article on (reduce())[https://codeburst.io/learn-understand-javascripts-reduce-function-b2b0406efbdc]. 
-    They also have similar articles on the other main ones (map, filter, forEach).
+2. Higher Order Functions. A nice article on [`reduce()`](https://codeburst.io/learn-understand-javascripts-reduce-function-b2b0406efbdc). 
+    They also have similar articles on the other main ones (`map`, `filter`, `forEach`).
 
 
 **Knowing WHEN to use something is easily as, if not more, important than knowing HOW**
 
 # 25 October 2018, Components in Frameworks 
 #### Word of the Day
-* (**Framework**)[https://skillcrush.com/2018/07/23/what-is-a-javascript-framework/]: Probably should've 
+* [**Framework**](https://skillcrush.com/2018/07/23/what-is-a-javascript-framework/): Probably should've 
 started the week off with this word, but here goes: a JS framework is a tool for making JS coding faster 
 and more efficient. The article I found breaks it down into much simpler terms: think of development as 
 building a house. You could either make all of the materials from scratch (bricks, glass, countertops, toilet)
