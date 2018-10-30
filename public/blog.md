@@ -506,3 +506,63 @@ and the package-locks.
 #### Things I need to refresh:
 1. Still not entirely sure what all to put as a parameter in a function. That's where a lot of confusion
     is coming from in the zinc framework exercise. 
+
+    
+
+
+# 29 October 2018
+* What do we expect when we `console.log` an object? 
+  * A reference to ____ // live object 
+  * Gets backfilled 
+* A promise is an **asynchronous** function
+  * 
+* Controller: function defining that describes behavior of component. Want a click event - add controller to 
+element to get the click happening
+
+
+
+# 30 October, Getting back on track
+So I got a little off-track with making sure my notes and ramblings were up to date. Very possibly just because 
+I did next to nothing this past weekend (other than get my ass kicked by a bike ride -- steep hills and first time 
+I'd ridden since having a nasty bout of the flu). We're working on building a framework and it's so difficult. One 
+of the (if not *the*) main things that makes it so difficult is not knowing what to Google to get more information
+on what we're doing.
+
+#### Word of the Day
+
+#### Developments and Practice
+* One thing that I haven't had practice with is branching and merging-- really all things Git other than the basics.
+So for the framework exercise, I'm creating new branches for each part. Something that I got stuck on is keeping the 
+changes from one section (on a branch) to the next (on a new branch). Based on my Googling, I believe the solution is 
+either rebase or merge. So, using [Atlassian Bitbucket](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing), here goes:
+  * They both essentially solve the same problem: integrate changes from one branch into another branch
+  * **Merge**:
+    ```shell
+    git checkout feature 
+    git merge master 
+    ```
+    Or one-liner: `git merge master feature`
+    This ties together the histories of both branches in a non-destructive way; as in, the existing branches are not 
+    changed in any way. 
+    * Downside: `feature` branch will have an extra commit every time you incorporate upstream changes and can 
+    potentially pollute feature branch's history. 
+  * **Rebase**
+    ```shell
+    git checkout feature
+    git rebase master
+    ```
+    Moves the entire feature branch to begin on the tip of the master branch, effectively incorporating all the new 
+    commits in master. The key difference is that rebasing *re-writes* the project history by making new commits
+    for each commit in the original branch.
+    * Benefit: creates cleaner, linear project history by eliminating unnecessary merge commits and lets you follow the 
+    tip of the feature branch all the way to the beginning of the project without any forks. 
+    * Downside: re-writing history can be really bad (duh) for collaboration workflow and you lose the context of merge 
+    commits (can't see when upstream changes were incorporated into the feature.)
+
+All of that aside, what I really just needed to do was create the branch from the current branch (in my case, create 
+components-03 while on the components-02 branch). At least I learned things along the way. 
+
+#### Learned Things
+
+#### Things I need to refresh (or go deeper with)
+
